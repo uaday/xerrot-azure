@@ -1,0 +1,9 @@
+{
+  "name": "hello-node",
+  "version": "0.0.0",
+  "description": "HelloNode",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
