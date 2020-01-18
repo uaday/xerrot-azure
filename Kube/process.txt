@@ -1,0 +1,9 @@
+execution line 2 for login in the azure account
+
+execution line 5 for the CREATE CONTAINER REGITRY
+
+execution line 42 for the CREATE SERVICE PRINCIPAL
+
+execution line 53 for the GET ACR ID
+
+execution line 58 for ASSIGN 'acrpull' ROLE to SP use <spId> from 53 line command appId

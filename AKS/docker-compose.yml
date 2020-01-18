@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  web:
+    image: ${DOCKER_REGISTRY}-web:${VERSION:-dev}
+    build:
+      context: .
+      dockerfile: Web/Dockerfile
+    depends_on:
+      - helloworld
+      - helloworldnode
+  helloworld:
+    image: ${DOCKER_REGISTRY}-helloworld:${VERSION:-dev}
+    build:
+      context: .
+      dockerfile: Services/HelloWorld/Dockerfile
+  helloworldnode:
+    image: ${DOCKER_REGISTRY}-helloworldnode:${VERSION:-dev}
+    build:
+      context: .
+      dockerfile: Services/HelloNode/Dockerfile
