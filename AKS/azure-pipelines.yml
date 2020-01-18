@@ -14,7 +14,7 @@ steps:
 - script: sudo service docker status
   displayName: 'docker status'
 
-- script: docker-compose -f ./AKS/docker-compose.yml -f ./AKS/docker-compose.override.yml --project-directory . build
+- script: docker-compose -f ./AKS/docker-compose.yml -f ./AKS/docker-compose.override.yml --project-directory ./AKS build
   displayName: 'docker-compose build'
 
 - script: |
