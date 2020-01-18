@@ -19,9 +19,9 @@ steps:
 
 - script: |
     echo "$(dockerPassword)" | docker login  $(dockerId).azurecr.io -u $(dockerUsername) --password-stdin
-    docker push $(dockerId).azurecr.io-helloworld:$(VERSION)
-    docker push $(dockerId).azurecr.io-helloworldnode:$(VERSION)
-    docker push $(dockerId).azurecr.io-web:$(VERSION)    
+    docker push $(dockerId).azurecr.io/$(dockerId).azurecr.io-helloworld:$(VERSION)
+    docker push $(dockerId).azurecr.io/$(dockerId).azurecr.io-helloworldnode:$(VERSION)
+    docker push $(dockerId).azurecr.io/$(dockerId).azurecr.io-web:$(VERSION)    
   displayName: "docker publish"
   
 - task: CopyFiles@2
